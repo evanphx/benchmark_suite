@@ -5,6 +5,7 @@ README.txt
 Rakefile
 bin/benchmark
 lib/benchmark/compare.rb
+lib/benchmark/helpers.rb
 lib/benchmark/ips.rb
 lib/benchmark/suite-run.rb
 lib/benchmark/suite.rb
