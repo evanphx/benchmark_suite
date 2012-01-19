@@ -234,7 +234,7 @@ module Benchmark
     end
 
     if job.compare
-      Benchmark.compare *reports
+      Benchmark.compare(*reports)
     end
   end
 
