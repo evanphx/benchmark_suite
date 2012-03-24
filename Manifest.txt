@@ -4,10 +4,7 @@ Manifest.txt
 README.txt
 Rakefile
 bin/benchmark
-lib/benchmark/compare.rb
-lib/benchmark/ips.rb
 lib/benchmark/suite-run.rb
 lib/benchmark/suite.rb
-lib/benchmark/timing.rb
 lib/benchmark_suite.rb
 test/test_benchmark_suite.rb
