@@ -12,6 +12,7 @@ require 'hoe'
 
 Hoe.spec 'benchmark_suite' do
   developer('Evan Phoenix', 'evan@fallingsnow.net')
+  dependency "benchmark-ips", "~> 1.0"
 end
 
 # vim: syntax=ruby
