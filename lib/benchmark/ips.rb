@@ -156,6 +156,24 @@ module Benchmark
 
     reports = []
 
+    # half-length pre-warmup to even out perf
+    half_warmup = warmup / 2.0
+    job.list.each do |item|
+      Timing.clean_env
+      
+      before.update!
+      start.update!
+      cur.update!
+
+      warmup_iter = 0
+
+      until start.elapsed?(cur, half_warmup)
+        item.call_times(1)
+        warmup_iter += 1
+        cur.update!
+      end
+    end
+
     job.list.each do |item|
       suite.warming item.label, warmup if suite
 
