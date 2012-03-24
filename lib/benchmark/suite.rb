@@ -2,6 +2,8 @@ require 'benchmark'
 
 module Benchmark
   class Suite
+    @current = nil
+
     def self.current
       @current
     end
@@ -37,9 +39,10 @@ module Benchmark
       @reports = {}
       @order = []
       @quiet = false
+      @verbose = false
     end
 
-    attr_reader :reports
+    attr_reader :reports, :report
 
     def quiet!
       @quiet = true
@@ -82,7 +85,7 @@ module Benchmark
       rescue Exception => e
         STDOUT.puts "\nError in #{file}:"
         if e.respond_to? :render
-          e.render(STDERR)
+          e.render
         else
           STDOUT.puts e.backtrace
         end
