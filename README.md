@@ -1,12 +1,12 @@
-= benchmark_suite
+# benchmark_suite
 
 * http://github.com/evanphx/benchmark_suite
 
-== DESCRIPTION:
+## DESCRIPTION:
 
 A set of enhancements to the standard library benchmark.rb 
 
-== FEATURES/PROBLEMS:
+## FEATURES/PROBLEMS:
 
  * benchmark/ips - benchmarks a blocks iterations/second. For short snippits
    of code, ips automatically figures out how many times to run the code
@@ -16,8 +16,9 @@ A set of enhancements to the standard library benchmark.rb
    multiple rubies.
 
 
-== SYNOPSIS:
+## SYNOPSIS:
 
+```ruby
 require 'benchmark/ips'
 
 Benchmark.ips do |x|
@@ -41,16 +42,17 @@ Benchmark.ips do |x|
   # overhead. Typically not needed, use the |times| form instead.
   x.report("addition3", "1 + 2")
 end
+```
 
-== REQUIREMENTS:
+## REQUIREMENTS:
 
 * ruby-ffi on MRI
 
-== INSTALL:
+## INSTALL:
 
-* gem install benchmark-suite
+* gem install benchmark_suite
 
-== DEVELOPERS:
+## DEVELOPERS:
 
 After checking out the source, run:
 
@@ -59,7 +61,7 @@ After checking out the source, run:
 This task will install any missing dependencies, run the tests/specs,
 and generate the RDoc.
 
-== LICENSE:
+## LICENSE:
 
 (The MIT License)
 
