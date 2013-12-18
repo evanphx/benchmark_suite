@@ -26,9 +26,9 @@ module Benchmark
     end
 
     class SimpleReport
-      def initialize
-        @start = nil
-        @end = nil
+      def initialize(s = nil, e = nil)
+        @start = s
+        @end = s
       end
 
       attr_reader :start, :end
